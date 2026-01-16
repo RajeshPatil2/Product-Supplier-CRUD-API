@@ -1,82 +1,103 @@
-Product–Supplier CRUD API (Spring Boot)
-🔹 Project Overview
+==================================================
+**PRODUCT – SUPPLIER CRUD API (SPRING BOOT PROJECT)**
+==================================================
 
-This project is a Spring Boot REST API that manages Products and their Supplier Details.
+**PROJECT SUMMARY**
+--------------------------------------------------
+This project is a Spring Boot REST API used to manage
+Product and Supplier data.
 
-One Product is linked with one Supplier
+One Product is linked with One Supplier using
+One-To-One JPA mapping.
 
-Built using real-world inventory use case
+This project demonstrates real-world backend
+development using Spring Boot.
 
-Backend API ready to connect with Angular frontend
+--------------------------------------------------
+**WHY THIS PROJECT IS IMPORTANT**
+--------------------------------------------------
+• Real business use case (Product & Supplier)
+• Clean REST API design
+• CRUD operations (Create, Read, Update, Delete)
+• Backend project used in companies
+• Angular frontend ready backend
 
-🔹 What I Implemented (Easy Explanation)
+--------------------------------------------------
+**TECHNOLOGIES USED**
+--------------------------------------------------
+• Java
+• Spring Boot
+• Spring Web (REST APIs)
+• Spring Data JPA
+• Hibernate
+• MySQL Database
+• Lombok
+• Maven
 
-Created REST APIs for Product and Supplier
+--------------------------------------------------
+**WHAT I IMPLEMENTED IN THIS PROJECT**
+--------------------------------------------------
+• REST Controllers using @RestController
+• CRUD APIs for Product and Supplier
+• One-To-One relationship using JPA
+• Service layer for business logic
+• Repository layer for database operations
+• Proper HTTP status codes
+• Transaction management
+• Cross-Origin support for frontend
 
-Used One-to-One JPA mapping
+--------------------------------------------------
+**ONE-TO-ONE JPA RELATIONSHIP**
+--------------------------------------------------
+Product  -------- One-To-One -------- Supplier
 
-Implemented CRUD operations:
+Each Product has exactly one Supplier.
+Supplier details are saved automatically
+using CascadeType.ALL.
 
-Create Product
+--------------------------------------------------
+**REST API ENDPOINTS**
+--------------------------------------------------
 
-View Single Product
+POST    /save_product
+GET     /view_product
+GET     /view_product/{id}
+PUT     /postproduct/{productId}
+DELETE  /postproduct/{productId}
 
-View All Products
+--------------------------------------------------
+**@CrossOrigin EXPLANATION (IMPORTANT)**
+--------------------------------------------------
+@CrossOrigin("http://localhost:4200")
 
-Update Product
+This annotation allows requests from
+Angular frontend running on port 4200.
 
-Delete Product
+It helps frontend and backend communicate
+without CORS errors.
 
-Used Service Layer for business logic
+This makes the backend frontend-ready.
 
-Used Repository Layer for database operations
+--------------------------------------------------
+**PROJECT ARCHITECTURE (LAYERED DESIGN)**
+--------------------------------------------------
 
-🔹 Technologies Used
+Controller Layer
+↓
+Service Layer
+↓
+Repository Layer
+↓
+Database (MySQL)
 
-Java
+This architecture improves:
+• Code readability
+• Maintainability
+• Scalability
 
-Spring Boot
-
-Spring Web (REST APIs)
-
-Spring Data JPA
-
-Hibernate
-
-MySQL
-
-Lombok
-
-🔹 JPA Relationship
-Product  ---- OneToOne ----  Supplier
-
-🔹 Important Annotation Used
-
-@CrossOrigin("http://localhost:4200
-")
-
-Allows API access from Angular frontend
-
-Prevents CORS errors
-
-Helps backend and frontend communicate smoothly
-
-🔹 REST API Endpoints
-
-Product APIs
-
-POST /save_product → Save product with supplier
-
-GET /view_product/{id} → Get product by ID
-
-GET /view_product → Get all products
-
-PUT /postproduct/{productId} → Update product
-
-DELETE /postproduct/{productId} → Delete product
-
-
-🔹 Author
-
-Rajesh Patil
+--------------------------------------------------
+**AUTHOR**
+--------------------------------------------------
+Rajesh Patil  
 Java | Spring Boot | REST APIs | Microservices
+==================================================
